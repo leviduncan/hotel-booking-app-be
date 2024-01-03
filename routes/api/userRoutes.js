@@ -37,9 +37,11 @@ router.put('/users/:id', (req, res) => {
 
 // Delete an individual user based on id
 router.delete('/users/:id', (req, res) => {
-    User.findByIdAndRemove(req.params.id)
+    User.findByIdAndDelete(req.params.id)
         .then(() => res.json({ success: true }))
         .catch(err => res.status(400).json(err))
   })
+
+// router.delete('/users/:id', User.deleteUser);
 
   module.exports = router

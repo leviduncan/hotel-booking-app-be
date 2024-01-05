@@ -1,5 +1,4 @@
 const express = require('express')
-// const serverless = require('serverless-http')
 const router = express.Router()
 const User = require('../../models/userModel')
 
@@ -43,7 +42,4 @@ router.delete('/users/:id', (req, res) => {
         .catch(err => res.status(400).json(err))
   })
 
-// router.delete('/users/:id', User.deleteUser);
-
   module.exports = router
-//   module.exports.handler = serverless(app)

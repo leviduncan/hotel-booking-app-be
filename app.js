@@ -3,7 +3,7 @@ const app = express()
 const connectDB = require('./config/db')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const port = process.env.port || 3000
+const port = 5000
 
 // Middleware
 require('dotenv').config()
@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
 const userRouter = require('./routes/api/userRoutes')
 app.use('/api', userRouter)
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Server is up and running on Port: ${port}`)
 })

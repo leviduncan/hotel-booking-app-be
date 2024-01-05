@@ -5,3 +5,5 @@
 functions
 
 .env
+# Local Netlify folder
+.netlify

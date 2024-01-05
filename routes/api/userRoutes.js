@@ -15,7 +15,7 @@ router.post('/users', (req, res) => {
 })
 
 // Get all users
-router.get('/', (req, res) => {
+router.get('/users', (req, res) => {
     User.find()
         .then(users => res.json(users))
         .catch(err => res.status(400).json(err))

@@ -7,11 +7,6 @@ const BookingSchema = new Schema({
         ref: 'User',
         required: true,
       },
-      hotel: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Hotel',
-        required: true,
-      },
       room: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Room',
